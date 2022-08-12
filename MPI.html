@@ -22,7 +22,7 @@
  
   <body>
 
-      <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <a id="log" width="50" height="50" class="d-inline-block align-top" alt="" href="PushaP.html">
             <img src="Screenshot_2.png" id="log" width="50" height="50" class="d-inline-block align-top" alt="">
           </a>
@@ -36,10 +36,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="CD.html">Cities <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="https://www.visitestonia.com/en">Estonian Tourism</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.visitestonia.com/en">Culture and Attrations</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,15 +56,20 @@
                   <a class="dropdown-item" href="MPI.html">Estonian Independence</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <button class="btn btn-primary btn-lg" type="btn">Contact Us</button>
-            </form>
+            
+            <button class="btn btn-primary btn-lg" type="btn" id="finally">Contact Us</button>
           </div>
         </nav>
+        <div class="popup">
+          <div class="popup-content">
+            <img src="closebutt.png" alt="close" class="close">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Message">
+          </div>
+        </div>
         <div class="ttte">
           <h2 id="ttte1">Estonian Independence</h2>
           <h2 id="ttte2">February 24th 1918</h2>
@@ -93,7 +101,7 @@
           
           <div class="accordion" id="accordionExample">
             <div id="imggcon">
-              <img src="IID.jpg" id="imgg">
+              <img src="eIID.png" id="imgg">
               <figcaption>An elephant at sunset</figcaption>
             </div>
             <div class="card">
@@ -173,13 +181,28 @@
     <script>
       $(document).ready(function(){
         var ID = new Date();
-        ID.setDate(24);
+        ID.setDate(23);
         ID.setFullYear(2023);
         ID.setMonth(1);
+        ID.setHours(11);
+        ID.setMinutes(59);
+        ID.setSeconds(59);
         $('.countdown').countdown({
           until:ID
         });
       });
+
+      document.getElementById("finally").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "inline-block";
+      })
+
+      document.querySelector(".close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+      })
+
+      
+
+      
   
     </script>
     
@@ -190,6 +213,41 @@
   </body>
   <style>
 
+      .close{
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+      }
+      input{
+        margin: 20px auto;
+        display:block;
+        width: 50%;
+        padding: 8px;
+        border: 1px solid grey;
+      }
+      .popup{
+        width:100%;
+        height: 100%;
+        top: 0;
+        align-items: center;
+        text-align: center;
+        float: right;
+        position: fixed;
+        display: none;
+        border: 3px solid black;
+        z-index: 9;
+      }
+
+      .popup-content{
+        background: rgba(255, 255, 255);
+        width:17%;
+        height: 500px;
+        border-radius: 5px;
+        margin-left: 82%;
+        margin-top: 100px;
+        border: 3px solid black;
+      }
+
       #imggcon{
         padding-left: 20%;
         padding-bottom: 40px;
@@ -198,6 +256,7 @@
       #imggcon > img{
         border: black solid 3px;
         box-shadow: 2px 2px 20px white;
+        width:75%;
       }
 
       #imggcon > figcaption{

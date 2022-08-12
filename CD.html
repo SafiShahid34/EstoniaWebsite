@@ -1,59 +1,138 @@
 <DOCTYPE html>
     <head>
-        <title>Countdown</title>
+        <title>Cities</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Blaka&family=Finger+Paint&family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Blaka&family=Finger+Paint&family=Pacifico&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ravi+Prakash&family=Roboto:ital,wght@0,500;1,300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+        <script type="text/javascript" src="js/jquery.plugin.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
     </head>
     <body>
-        <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a id="log" width="50" height="50" class="d-inline-block align-top" alt="" href="PushaP.html">
-              <img src="Screenshot_2.png" id="log" width="50" height="50" class="d-inline-block align-top" alt="">
-            </a>
-            <a id="title" class="navbar-brand" href="PushaP.html">
-                Estonia
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+      <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a id="log" width="50" height="50" class="d-inline-block align-top" alt="" href="PushaP.html">
+          <img src="Screenshot_2.png" id="log" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        <a id="title" class="navbar-brand" href="PushaP.html">
+            Estonia Cities
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="CD.html">Cities <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.visitestonia.com/en">Estonian Tourism</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.visitestonia.com/en">Culture and Attrations</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                History
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Carl Eugene in debt</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">The Drunken Danes</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="MPI.html">Estonian Independence</a>
+              </div>
+            </li>
+          </ul>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    History
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Carl Eugene in debt</a>
-                    <a class="dropdown-item" href="#">The Drunken Danes</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="MPI.html">Methanol Poisoning Incident</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-primary btn-lg" type="btn">Contact Us</button>
-              </form>
+          <button class="btn btn-primary btn-lg" type="btn" id="finally">Contact Us</button>
+        </div>
+      </nav>
+      <div class="popup">
+        <div class="popup-content">
+          <img src="closebutt.png" alt="close" class="close">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Message">
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Estonian Cities</h2>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Tallinn</h4>
+            <a class="btn btn-primary" data-toggle="modal" href="#modal-id" data-src="/CDim/UnoP.html">
+              <img src="CDim/Tallinn.png">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <h4>Tartu</h4>
+            <a class="btn btn-primary mid" data-toggle="modal" href="#modal-id" data-src="/CDim/DosP.html">
+              <img src="CDim/Tartu.png">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <h4>Narva</h4>
+            <a class="btn btn-primary" data-toggle="modal" href="#modal-id" data-src="/CDim/TresP.html">
+              <img src="CDim/Narva.png">
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Parnu</h4>
+            <a class="btn btn-primary" data-toggle="modal" href="#modal-id" data-src="/CDim/QuatroP.html">
+              <img src="CDim/Parnu.png">
+            </a>
+          </div>
+          <div class="col-md-4 mid">
+            <h4>Kohtla-Järve</h4>
+            <a class="btn btn-primary" data-toggle="modal" href="#modal-id" data-src="/CDim/CincoP.html">
+              <img src="CDim/Kohtla-Järve.png">
+            </a>
+          </div>
+          <div class="col-md-4">
+            <h4>Viljandi</h4>
+            <a class="btn btn-primary" data-toggle="modal" href="#modal-id" data-src="/CDim/SiesP.html">
+              <img src="CDim/Viljandi.png">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="modal fade" id="modal-id">
+        <div class="modal-dialog" >
+          <div class="modal-content" >
+            <div class="modal-header">
+              <h4 class="modal-title">Estonian Cities</h4>
             </div>
-          </nav>
+            <div class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
     
           
     
@@ -74,16 +153,140 @@
             </div>
         
       </div>
-      
+        
+      <script src="js/jquery.plugin.min.js"></script> 
+      <script src="js/jquery.countdown.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          var ID = new Date();
+          ID.setDate(23);
+          ID.setFullYear(2023);
+          ID.setMonth(1);
+          ID.setHours(11);
+          ID.setMinutes(59);
+          ID.setSeconds(59);
+          $('.countdown').countdown({
+            until:ID
+          });
+        });
+
+        document.getElementById("finally").addEventListener("click", function(){
+          document.querySelector(".popup").style.display = "inline-block";
+        })
+
+        document.querySelector(".close").addEventListener("click", function(){
+          document.querySelector(".popup").style.display = "none";
+        })
+
+        $('a').on('click', function(){
+          $.ajax({
+          method: 'GET',
+          url: $(this).attr('data-src'),
+          success: function(response){
+            $('#modal-id .modal-body').html(response);
+          },
+          error: function(){
+            alert("yo mama");
+          }
+          });
+
+        });
+
+        
+
+        
+    
+      </script>
       
     
           
         
     </body>
     <style>
-    
+        
+        .modal-title{
+          padding-right: 100px;
+        }
+        .container > h2{
+          font-family: 'Sedgwick Ave Display', cursive;
+          color: rgb(255, 255, 255);
+          margin-left: 16%;
+          font-size: 45px;
+          text-shadow: 1px 1px 5px rgb(16, 147, 255);
+        }
+
+        .col-md-4 > h4{
+          font-family: 'Sedgwick Ave Display', cursive;
+          color: white;
+          font-size: 30px;
+          text-shadow: 1px 1px 5px rgb(16, 147, 255);
+        }
+       
+        .col-md-4>a{
+          width: 350px;
+          height:220px;
+          margin: 10px;
+          box-shadow: black;
+          border: 4px rgb(0, 0, 0) solid;
+          background-color: blue;
+          background: linear-gradient(rgb(75, 168, 255), rgb(93, 177, 255),rgb(123, 191, 255), rgb(153, 206, 255), rgb(166, 210, 250), rgb(181, 218, 252), rgb(187, 222, 255), rgb(197, 227, 255))
+        }
+
+        .col-md-4>a:hover{
+          background-color: rgb(0, 0, 0);
+        }
+
+        .btn > img{
+          width: 100%;
+          height:100%;
+        }
+        .container{
+          margin-top: 7%;
+        }
+        .row{
+          margin: 10px;
+        }
+        .close{
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+        input{
+          margin: 20px auto;
+          display:block;
+          width: 50%;
+          padding: 8px;
+          border: 1px solid grey;
+        }
+        .popup{
+          width:100%;
+          height: 100%;
+          top: 0;
+          align-items: center;
+          text-align: center;
+          float: right;
+          position: fixed;
+          display: none;
+          border: 3px solid black;
+          z-index: 9;
+        }
+
+        .popup-content{
+          background: rgba(255, 255, 255);
+          width:17%;
+          height: 500px;
+          border-radius: 5px;
+          margin-left: 82%;
+          margin-top: 100px;
+          border: 3px solid black;
+        }
+      
         #df{
           float: right;
+          background-color: white;
+          border: black 2px solid;
+          border-radius: 20px;
+          padding: 5px;
         }
         
         .bigIcon{
@@ -104,7 +307,8 @@
         }
     
         body{
-            background: linear-gradient(rgb(75, 168, 255), rgb(93, 177, 255),rgb(123, 191, 255), rgb(153, 206, 255), rgb(166, 210, 250), rgb(181, 218, 252), rgb(187, 222, 255), rgb(197, 227, 255));
+            background-image: url("CityBack.webp");
+            background-size: 100%;
         }
     
         #title{

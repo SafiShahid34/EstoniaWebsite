@@ -10,8 +10,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="bootstrap-tour.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="bootstrap-tour.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 </head>
@@ -30,10 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="CD.html" id="nnex">Cities <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="CD.html">Estonian Independence</a>
+              <a class="nav-link" href="https://www.visitestonia.com/en">Estonian Tourism</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.visitestonia.com/en">Culture and Attrations</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,16 +52,22 @@
                 <a class="dropdown-item" href="MPI.html">Estonian Independence</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-primary btn-lg" type="btn">Contact Us</button>
-          </form>
+          
+          <button class="btn btn-primary btn-lg" type="btn" id="finally">Contact Us</button>
         </div>
       </nav>
 
+      <div class="popup" action="https://formsubmit.co/kubowania@gmail.com" method="POST">
+        <form class="popup-content">
+          <img src="closebutt.png" alt="close" class="close">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Message">
+          <button type="submit">Send</button>
+        </form>
+      </div>
       
 
       
@@ -156,6 +167,41 @@
     
 </body>
 <style>
+    .close{
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+    input{
+      margin: 20px auto;
+      display:block;
+      width: 50%;
+      padding: 8px;
+      border: 1px solid grey;
+    }
+    .popup{
+      width:100%;
+      height: 100%;
+      top: 0;
+      align-items: center;
+      text-align: center;
+      float: right;
+      position: fixed;
+      display:none;
+      border: 3px solid black;
+      z-index: 9;
+    }
+
+    .popup-content{
+      background: rgba(255, 255, 255);
+      width:17%;
+      height: 500px;
+      position: absolute;
+      border-radius: 5px;
+      margin-left: 82%;
+      margin-top: 100px;
+      border: 3px solid black;
+    }
 
     #df{
       float: right;
@@ -230,3 +276,35 @@
 
 
 </style>
+<script>
+  document.getElementById("finally").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "inline-block";
+  })
+
+  document.querySelector(".close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+  })
+
+  var tour = new Tour({
+    steps: [
+      {
+        element: "#title",
+        title: "Title of my step",
+        content: "Content of my step"
+      },
+      {
+       element: "#nnex",
+       title: "Title of my step",
+       content: "Content of my step"
+      }
+    ]
+  });
+
+  // Initialize the tour
+  tour.init();
+
+  // Start the tour
+  tour.start();
+
+
+</script>
